@@ -16,7 +16,7 @@ stages:
 
     - task: Docker@2
       inputs:
-        containerRegistry: 'saasconnector'
+        containerRegistry: 'dgiiexam'
         repository: '$(imageName)'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
