@@ -12,14 +12,14 @@ stages:
   jobs:
   - job: Build
     steps:
-    - task: Checkout@1
+    - checkout: self
 
     - task: Docker@2
       inputs:
-        containerRegistry: 'dgiiexam'
+        containerRegistry: 'dgiiexam'  # <-- reemplaza con tu conexión real
         repository: '$(imageName)'
         command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
+        Dockerfile: 'saas-website-template/Dockerfile'
         tags: |
           latest
 
