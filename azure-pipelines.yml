@@ -16,7 +16,7 @@ stages:
 
     - task: Docker@2
       inputs:
-        containerRegistry: 'YourDockerRegistryServiceConnection'
+        containerRegistry: 'saasconnector'
         repository: '$(imageName)'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
